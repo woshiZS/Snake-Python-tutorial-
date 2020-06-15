@@ -14,7 +14,17 @@
 
 * format string:use ```f"{var1}{var2}"``` to emplace the corresponding var to its value.
 * format control symbol: you've already got it.
-* strip strings : use ```strip()``` to remove extra white spaces.**There is one more thing to say that rstrip(),lstrip() and strip() all return a new value instead of change the string themselves!** 
+* strip strings : use ```strip()``` to remove extra white spaces.**There is one more thing to say that rstrip(),lstrip() and strip() all return a new value instead of change the string themselves!**
+
+> Numbers
+
+* The result of division is float defaultly.
+* you can use underscores in numbers to make large numbers more readable which do not affect the result **!**
+* multiple assignment : have learned once;```x,y,z=1,2,3```
+* Python has no built-in constant and py programmers use all capital letters to indicate a variable.
+* 
+
+ 
 
 * ```if __name__ =="__main__"```：定义程序入口，只在本程序下运行代码块之中的内容，被其他文件引用时不执行代码块中的内容，避免不必要的程序运行
 * 似乎多出来的b的问题可以用base64解决。
