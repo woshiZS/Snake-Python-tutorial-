@@ -8,9 +8,13 @@
 >
 > >String
 > >
-> >single quote and double quotes are both okay.(为了更好地套娃2333)
+> >single quote and double quotes are both okay.(为了更好地套娃2333,反正一个包括，另一个用于内部套娃23333)
 > >
-> >use title() function could change the string's form like a title. 
+> >use title() function could change the string's form like a title. Similar methods includes upper() ,lower().
+
+* format string:use ```f"{var1}{var2}"``` to emplace the corresponding var to its value.
+* format control symbol: you've already got it.
+* strip strings : use ```strip()``` to remove extra white spaces.**There is one more thing to say that rstrip(),lstrip() and strip() all return a new value instead of change the string themselves!** 
 
 * ```if __name__ =="__main__"```：定义程序入口，只在本程序下运行代码块之中的内容，被其他文件引用时不执行代码块中的内容，避免不必要的程序运行
 * 似乎多出来的b的问题可以用base64解决。
