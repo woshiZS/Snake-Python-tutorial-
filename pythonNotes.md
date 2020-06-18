@@ -24,7 +24,37 @@
 * Python has no built-in constant and py programmers use all capital letters to indicate a variable.
 * 
 
- 
+ ### Introducing Lists
+
+>use square brackets toindicate lists
+>
+>acess elements:
+>
+>>Normal index approach  is already known,remeber -1 return the last element of a list.
+>
+>changing ,adding and removing elements
+>
+>>changing is similar to syntax of accessing an element.
+>>
+>>use ```append()``` to add a element at the end of  a list.
+>>
+>>Insert elements into a list:use ```insert(_pos,_ele)``` to insert element in the giving position.
+>>
+>>Removing a element from a list (accoring pos or value)
+>>
+>>if you know the position of  a element；use```del(_listName[_pos])``` to remove a element.
+>>
+>>```pop()``` remove the element and return it.also,```pop(_pos)``` del the ele at the giving position.
+>>
+>>use ```remove(_value)``` to remove the giving element firstly appearing in the list. 
+>
+>Organizing a List
+>
+>>use ```sort()``` to sort a list permanently,default is alphabrtically, and ```sort(reverse=True)``` sort in the reverse order.
+>>
+>>use ```sorted(_listName)``` to display a list in a particular order but dosen't affect the original one. And it also 
+>>
+>>
 
 * ```if __name__ =="__main__"```：定义程序入口，只在本程序下运行代码块之中的内容，被其他文件引用时不执行代码块中的内容，避免不必要的程序运行
 * 似乎多出来的b的问题可以用base64解决。
