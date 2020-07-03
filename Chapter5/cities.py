@@ -8,5 +8,3 @@ for city,infos in cities.items():
     print(city)
     for k,v in infos.items():
         print(f"\t{k} : {v}")
-
-

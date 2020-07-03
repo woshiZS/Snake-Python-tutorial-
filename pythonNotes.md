@@ -191,6 +191,28 @@
 >
 >
 
+### User Input and While Loops
+
+>Use ```input()``` to accept user input and use ```int()```  casting str to int.
+>
+>Module operator (I've learned that.)
+>
+>Using a Flag to judge if or not to quit the while loop.
+>
+>Break and Continue , not too much to say.**Avoid Infinite Loops**
+>
+>Using a While Loops with Lists and Dictionaries
+>
+>> You cant modify (Here 'Modify' means change the size of a list or a dictionary.)
+>>
+>> Moving Items from One List to Another: use while loop to pop from and append to another.
+>>
+>> Removing All Instances of Specific Values from a List: if a value is still in a list, continue to remove it.
+>>
+>> Filling a Dictionary with User Input
+>>
+>> 
+
 
 
 
