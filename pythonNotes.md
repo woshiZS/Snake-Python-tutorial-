@@ -54,7 +54,146 @@
 >>
 >>use ```sorted(_listName)``` to display a list in a particular order but dosen't affect the original one. And it also 
 >>
+>>use ```reverse()``` to reverse the list permanently.
 >>
+>>use ```len(_listName)``` to show the length of a list.
+>
+>Avoid Index Errors ! ! !
+
+### Working with Lists
+
+>Looping
+>
+>>Basic Information is already known.**Pay attention : var in for loop is still global var!**
+>>
+>>```range(_start,_end,_stepLen)``` function to present the numbers from the start number and stop before the end number
+>>
+>>use ```list(range(_start,_end))``` to generate a list，also  you can create almost alny set of numbers using ```range()``` function.
+>>
+>>Remember ```min(),max(),sum()``` function. 
+>
+>List Comprehension, like this:
+>
+>```python
+>target=[value for value in range(1,11)]
+>```
+>
+>working with part of a List
+>
+>>Slicing a List: use square brackets,0(By omitting the 2 value, it copied the original list),1,2 or 3index is okay.(The third value represent the skip len.)
+>>
+>>Looping through a slice : ```for player in players[:-3]:```
+>
+>dont use equation as copying behavior!!!
+>
+>Tuples
+>
+>>immutable list(lol)
+>>
+>>You can only change tuple when reassign the whole tuple.
+>
+>
+
+### If Statements
+
+>Multiple conditions : Use key words ```and```&& ```or```
+>
+>Use ```in``` to check if a certain value exits in a list.
+>
+>Checking whether a value is not in a list , use ```not``` keywords.
+>
+>Be aware of  the conception of boolean expression.
+>
+>If-elif statement can omit the last else statement and use a more specific elif statement.
+>
+>You can check special items using if statement with a list.
+>
+>**We can use list name in a if statement like what we do in cxx.If the list is not empty,statement returns True,else return false.**
+>
+>Styling your if statement : Use a single space **around** comparison operators!
+
+### Dictionaries
+
+>Key-value pattern!!!
+>
+>Define a dictionary by using a pair of braces.
+>
+>Use square braces to add and modify key-value pairs.
+>
+>Use del to delete key-value pairs like this:
+>
+>```del alien_0['points']```
+>
+>It is a good habit to include a comma after the last key-value pair as well.
+>
+>> Using get ( ) to acess value
+>>
+>> if a key doesn't exist in a dictionary , we could use ```get()``` like this :
+>>
+>> ```python
+>> alien_0 = ['color':'green','speed':'slow']
+>> point_value = alien_0.get('points','No point value assigned')
+>> # if 'points' exist, you'll get the correspoding value, if not,you get the default value. 
+>> ```
+>
+>Looping Through a Dictionary
+>
+>>All key-value pairs: like this
+>>
+>>```python
+>>for key,value in user_0.items():
+>>```
+>>
+>>Looping through all the keys in a dictionary like this:
+>>
+>>```python
+>>for name in favorite_language.keys():
+>>```
+>>
+>>you can also omit the ```keys()``` method and just use the dic's name.
+>>
+>>Another usage is to test if a key exist in a dictionary like this:
+>>
+>>```python
+>>if 'erin' not in favorite_languages:
+>>    # do something
+>>```
+>>
+>>Looping through a Dictionary's key in a particulat order
+>>
+>>We can wrap the ```sorted()``` method around the like this:
+>>
+>>```python
+>>for name in sorted(favorite_language.keys()):
+>>```
+>>
+>>Looping through all the values in a Dictionary
+>>
+>>Simply like this:
+>>
+>>```python
+>>for language in set(favorite_language.values()):
+>>```
+>>
+>>Set is a collection in which each iten must be unique.**Also wrapped in a pair of braces and dont mistake sets for dictionaries.** 
+>
+>Nesting
+>
+>>**A  List of Dictionaries** 
+>>
+>>each item in a list is a dictionary,remember each dictionary must have identical structure so you could work with each dictionary in the same way.
+>>
+>>**A List in a Dictionary**
+>>
+>>When you wanna associate more than a value with a single key
+>>
+>>DO NOT NESTING TOO DEEPLY.
+>
+>
+
+
+
+
 
 * ```if __name__ =="__main__"```：定义程序入口，只在本程序下运行代码块之中的内容，被其他文件引用时不执行代码块中的内容，避免不必要的程序运行
 * 似乎多出来的b的问题可以用base64解决。
