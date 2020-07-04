@@ -213,7 +213,37 @@
 >>
 >> 
 
+### Functions
 
+> Use ```def``` keyword to definie a function.Idented code block is function body.
+>
+> Passing Arguments
+>
+> >Positional Arguments : Pass Arguments according to the parameters' positions.
+> >
+> >Keyword Arguments : explicitly match each argument with a specific parameter. like this
+> >
+> >```python
+> >describe_pet(animal_type='hamster',pet_name='harry')
+> >```
+> >
+> >Default Argument : Pay attention to the position.Default argument should be set at the end of a function's parameter list. Because Python still interprets it as a positional arguments.
+> >
+> >Avoid Arguments Errors
+>
+> Return Values
+>
+> >Use ```return``` keyword to return a value (I' ve already leraned it.)
+> >
+> >Making Argument Optional ,like this:
+> >
+> >```python
+> >def get_formatted_name(first_name,last_name,middle_name='')#also like age=None
+> >```
+> >
+> >Returning a Dictionary : define a dictionary in the function code block.
+> >
+> >Using a Function with a while Loop
 
 
 
