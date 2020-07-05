@@ -243,7 +243,71 @@
 > >
 > >Returning a Dictionary : define a dictionary in the function code block.
 > >
-> >Using a Function with a while Loop
+> >Using a Function with a while Loop ：Remember include a quit condition.
+>
+> Passing a List : We can pass a list to a function like a normal argument.
+>
+> Modifying a List in a Function: Any changes made to the list inside the function body are permanent. ( But change on a single argument will not affect the original var outside the function.)
+>
+> Make each function to do a specific job,not too many different tasks.
+>
+> Prevent a Fuction from Modifying a List: ```function_name(list_name[:])``` (But it will need extra time and memory,**Attention here it is a function call not a function definition!!!**)
+>
+> **Passing an Arbitray Number of Arguments** (like this)
+>
+> ```python
+> def make_pizza(*toppings):
+> ```
+>
+> Remember to place arbitrary arguments at last of the parameter list.
+>
+> Double asterisk means create a dictionary and accept arbitray number of arguments.(like this)
+>
+> ```python
+> def build_profiles(first,last,**user_info):
+> ```
+>
+> **Storing Your Functions in Modules**
+>
+> Importing an Entire Module : Use import to import a module in your file.
+>
+> ```python
+> import pizza
+> 
+> pizza.make_pizza(16,'mushrooms')
+> ```
+>
+> Import Specific Functions
+>
+> ```python
+> from pizza import make_pizza,<other_func_name>
+> 
+> make_pizza(16,'mushrooms')
+> ```
+>
+> Using as to give a nickname
+>
+> ```python
+> from module_name import function_name as fn
+> ```
+>
+> We can also use as to  give module an alias
+>
+> ```python
+> import module_name as mn
+> ```
+>
+> Using asterisk to import all fuctions in a module
+>
+> ```python
+> from module_name import *
+> ```
+>
+> **Styling Your Function**
+>
+> No extra spaces on either side of the equal sign.
+>
+> If there are too many parameters ,press 'Enter' and 'tab' twice to distinguish from the function body.
 
 
 
@@ -496,3 +560,4 @@ else:
 python中协程可以通过generator来实现。
 
 **yield的作用其实是调用者和被调用者之间的通信，迭代器可以调用close函数，这样再次调用next(\<Iterator \>)就会报StopIteration的错误**
+
