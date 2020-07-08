@@ -309,6 +309,63 @@
 >
 > If there are too many parameters ,press 'Enter' and 'tab' twice to distinguish from the function body.
 
+### Classes
+
+>By convention, class name is capitalized.And like functions, a docstring under definition is better.
+>
+>a ```__init()__``` function is a must. Every mrthod related to a class must have a self parameter.
+>
+>Use class name(like construt function in cpp) to make an instance from a class.
+>
+>Setting a default value for an attribute.
+>
+>When a number is too long ,we can add undersocres to make it looks more clearly,like
+>
+>```python
+>mu_used_cars.update_odometers(23_500)
+>```
+>
+>**Modify Attribute Values**
+>
+>>Direcly by dot notation with an instance.
+>>
+>>Through a method.
+>
+>**Inheritance** like```class ElectricCar(Car):```
+>
+>>__init()__ Method for a Child Class: parent class must be part of the current file and must appear before the child class. 
+>>
+>>```python
+>>super().__init(...)__
+>>```
+>>
+>>We can also define attribute and method for child class.
+>>
+>>Overrinding Methods from the Parent Class : define a method in the child class with the same name as the method you want to override in the parent class.
+>>
+>>Use Instances as Attributes
+>
+>Importing Classes
+>
+>>Remember add a module level docstring describing the contents of a module.
+>>
+>>storing multiple classes in one module and these classes are related somehow.
+>>
+>>When you want to spread your classes into several modules to avoid one file from growing too large.
+>>
+>>Using alias as we did the previous chapter.
+>
+>Some Styling Issues
+>
+>* Class name should wrote in CamelCase while instances and module names use underscores. 
+>* Every class should have a docstring immediately following the class definition.
+>* One blank line between methods and 2 blank lines between different classes
+>* If you need to import a module from standard library and a module that you wrote. Import standard library module first, then add a blank line and import from your own module.
+
+### Filles and Exceptions
+
+
+
 
 
 * ```if __name__ =="__main__"```：定义程序入口，只在本程序下运行代码块之中的内容，被其他文件引用时不执行代码块中的内容，避免不必要的程序运行
