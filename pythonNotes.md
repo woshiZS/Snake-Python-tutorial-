@@ -364,7 +364,81 @@
 
 ### Filles and Exceptions
 
+>**Reading from a File**
+>
+>> Use  ```open()``` to open a file and return a a object represent this file.
+>>
+>> Ketowrd ```with``` closes the file once access to it is no longer needed.
+>>
+>> read(): An empty string is returned when EOF is encountered immediately.
+>
+>File path : No much to say , but remember to use forward slashes.(If you insist to use backslash ,remember to add escape to each backslash.```C:\\path\\to\\file.txt```)
+>
+>Reading line by line
 
+
+
+## Web Application
+
+### Getting Started with Django
+
+>Set up a Project
+>
+>>Before started, we need to write a spec to keep track of what we've done and development process focused.
+>
+>Virtual Environtment
+>
+>>Main effect: Isolate packages from all other Python packages.
+>>
+>>```bash
+>>python -m venv -m ll_env #create a virtual environment in a given path
+>>```
+>>
+>>Activate:
+>>
+>>```bash
+>>source ll_env/bin/activate #macOS or Linux
+>>./ll_env/Scripts/Activate.ps1 #Windows powershell
+>>```
+>>
+>>stop using a virtual environment
+>>
+>>```bash
+>>deactivate
+>>```
+>
+>Install Django and Start a Project
+>
+>>```bash
+>>pip install django
+>>django-admin startproject learning_log . #remember a dot behind a space
+>>```
+>>
+>>Create the Database 
+>>
+>>```bash
+>>python manage.py migrate #Any time we modify databases,we issue this command.
+>>```
+>>
+>>Start the Server
+>>
+>>```bash
+>>python manage.py runserver
+>>```
+>
+>Start a App
+>
+>>```bash
+>>python manage.py startapp learning_logs
+>>```
+>
+>Inside the learning_logs directory ,the most important files are model.py
+>
+>About models
+>
+>>A model tells python how to work with th e data that will be stored in the app.
+>
+>
 
 
 
