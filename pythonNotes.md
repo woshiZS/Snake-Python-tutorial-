@@ -432,13 +432,65 @@
 >>python manage.py startapp learning_logs
 >>```
 >
+>Once you have created this app,modify settings.py ,add this app into your INSTALLED_APPS as an item.
+>
 >Inside the learning_logs directory ,the most important files are model.py
 >
 >About models
 >
->>A model tells python how to work with th e data that will be stored in the app.
+>>A model tells python how to work with the data that will be stored in the app.
 >
+>change the current directory to the app you've just created and define models in models.py, Once you've changed the file ,enter the following in the terminal:
 >
+>```bash
+>python manage.py makemigrations <app_name>  #Here it is learning_logs
+>python manage.py migrate # Applying this app on your project!!!
+>```
+>
+>Set up a SuperUser
+>
+>>```bash
+>>python manage.py createsuperuser
+>>Username: ...
+>>Email: ...
+>>...
+>>```
+>
+>You can add models at the admin site.
+>
+>Define the Entry Model
+>
+>>Like what we've done in creating the topic model.Modify models.py and enter those 2 commands in the terminal.(In fact ,there are more details like how to connect each Entry with a Topic using a ForeignKey method.)
+>
+>The Django Shell
+>
+>>```powershell
+>>python manage.py shell #to open the django shell 
+>>```
+>>
+>>Use this interactive mode to query your objects and troubleshoot your bugs.
+>
+>**Making Pages :The learning Log Home Page**
+>
+>> Consist of 3 stages: define URLS, weting views, and writing templates.
+>
+>**Mapping  a URL**
+>
+>> Inside thre original project folder,add an app's urls, and inside that app's folder create another urls.py file which put all urls that might be used inside a variable called urlpatterns.**Use path functino to connect path and view functions.**
+>
+>**Writing a View**
+>
+>> In the app's folder ,define the function you just mentioned ,usually return a render function.(The parameter includes the request and html file).
+>
+>**Writing a Template**
+>
+>> In the app's folder, create a file folder called templates and inside templates create and write files according to what  you've provided in render fuction.
+>
+>**Building Additional Pages**
+>
+>Something about Templates Inheritance
+>
+>* 
 
 
 
