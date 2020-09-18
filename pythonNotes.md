@@ -176,6 +176,16 @@
 >>```
 >>
 >>Set is a collection in which each iten must be unique.**Also wrapped in a pair of braces and dont mistake sets for dictionaries.** 
+>>
+>>Here is another kind of set called fronzen set which means immutable.
+>>
+>>delaration like below:
+>>
+>>```python
+>>s = frozenset([1, 2, 3, 'a', 1])
+>>```
+>>
+>>
 >
 >Nesting
 >
@@ -376,7 +386,31 @@
 >
 >Reading line by line
 
+### python memory related and assignment mechanism
 
+* 这里主要还是提到了一个常量池的问题，但是对于较大的元素，这里经过测试，界限是256
+
+```python
+x = 256
+y = 256
+print(id(x))#140734570339360 id方法用于查看地址
+print(id(y))#140734570339360
+x = 257
+y = 257
+print(id(x))#2697754162832
+print(id(y))#2697752528080
+```
+
+这里还有另外一个和list相关的问题，就是list中的元素是不可变的，但是创建list的时候，回创建元素的地址以及pyList的地址，例子如下
+
+```python
+x = [500,501,502]
+y = x
+y[1] = 600
+y = [700,800]
+```
+
+比如说修改y[1]这个语句，他其实是另外再为600分配一个地址，然后在pyList中第二个位置修改为新分配的600的地址。
 
 ## Web Application
 
