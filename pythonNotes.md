@@ -778,3 +778,74 @@ python中协程可以通过generator来实现。
 
 **yield的作用其实是调用者和被调用者之间的通信，迭代器可以调用close函数，这样再次调用next(\<Iterator \>)就会报StopIteration的错误**
 
+## 学校慕课的补充部分
+
+### python基础
+
+#### 列表推倒式
+
+就是之前看到的那种语法，
+
+```python
+values = [10, 21, 4, 7, 12]
+squares = [x**2 for x in values]
+print (squares)
+```
+
+前面一个是列表中所要存储的值，后一个是x所属的范围，列表推倒时还可以进行筛选。
+
+```python
+values = [10, 21, 4, 7, 12]
+squares = [x**2 for x in values if x <= 10]
+print (squares)
+```
+
+当然也可以用列表推导生成set和dictionary，以及求出该形式下所有元素的和
+
+```python
+square_set = {x**2 for x in values if x <= 10}
+print(square_set)
+square_dict = {x: x**2 for x in values if x <= 10}
+print(square_dict)
+# 注意这里的方括号，实际上来说就是还是生成了一个临时列表然后用sum函数去计算它的和。
+total = sum([x*x for x in values])
+```
+
+但是使用方括号实际上会产生一个临时的列表，造成不必要的内存分配，所以我们也可以去掉方括号，不直接生成这个列表，时间比较的话，后者稍短，但是根据具体情况的不同有时候会出现误差。
+
+#### 异常
+
+具体格式就是使用
+
+```python
+try:
+    pass
+except (Exception):
+    pass
+```
+
+有一种情况就是并不是所有的异常都派生于Exception类，所以有时候更一般的写法是只写except。
+
+* 自定义异常，这个就不多说，在不满足条件的地方就raise一个异常。
+* finally关键字，如果try语句中有一场，finally语句块在抛出异常之前执行，如果没有出现异常，finally语句块在最后执行。
+
+#### warning
+
+大致意思就是说如果出现了一些错误但是又不想让程序停止运行。具体内容去看chapetr10中的代码文件
+
+#### 文件读写
+
+ipython中可以使用
+
+```python
+%%writefile test.txt
+...
+...
+...
+```
+
+When you want to finish writing press \<tab\>+ \<Enter\>.
+
+提一些之前没有注意到的点，在程序中关闭文件可以使改动发生在磁盘上，并且即使显式关闭文件，但是出现异常时不会讲改动写入磁盘，我们可以使用异常处理，但是更简便的做法是使用with语句来打开文件。
+
+* tips:os.remove()用于移除文件，os.rmdir()用于移除目录。
