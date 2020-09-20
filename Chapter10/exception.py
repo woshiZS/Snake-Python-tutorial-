@@ -9,4 +9,4 @@ while True:
         y = math.log10(x)
         print(f"log10{x} = {y}\n")
     except ValueError:
-        print("The value must be greater than 0")
+        print("The value must be greater than 0")    

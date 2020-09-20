@@ -849,3 +849,26 @@ When you want to finish writing press \<tab\>+ \<Enter\>.
 提一些之前没有注意到的点，在程序中关闭文件可以使改动发生在磁盘上，并且即使显式关闭文件，但是出现异常时不会讲改动写入磁盘，我们可以使用异常处理，但是更简便的做法是使用with语句来打开文件。
 
 * tips:os.remove()用于移除文件，os.rmdir()用于移除目录。
+
+### Advanced Topics
+
+#### sys模块简介
+
+简单来说呢就是与系统相关的一个模块。
+
+```python
+import sys
+# 获得并打印命令行参数
+print (sys.argv)
+#打印异常消息
+try:
+    x = 1/0
+except Exception:
+    print (sys.exc_info())
+```
+
+除此之外，还有显式当前平台和版本以及模块路径的功能。
+
+####  os模块简介
+
+主要还是和路径相关，以及路径文件之类的功能，ipython的环境太好用了，我这里就不多说了。具体细节坑定是要查文档的。
