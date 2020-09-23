@@ -872,3 +872,86 @@ except Exception:
 ####  os模块简介
 
 主要还是和路径相关，以及路径文件之类的功能，ipython的环境太好用了，我这里就不多说了。具体细节坑定是要查文档的。
+
+#### 函数进阶
+
+* python中的函数可以像变量一样存储在字典里，而且还可以作为返回值。
+* python中的函数传参方式是引用传参，但是如果我们在函数中将参数赋予一个新的值，那么函数外边的变量不会受到影响。
+* 默认参数是可变的，如果定义了默认参数，并且参数类型是可变类型，那么随着调用次数增加，默认参数会发生变化。一个比较好的做法就是定义None来保障呢个调用之间的状态维持。
+
+```python
+def f(x = None):
+    if x is None:
+        x = []
+    x.append(1)
+    return x
+
+print (f())
+print (f())
+print (f())
+print (f(x = [9,9,9]))
+print (f())
+print (f())
+```
+
+这里使用None相当于传递了一个信号，说明没有没有提供显示的参数，说明这里需要使用默认参数。
+
+* 高阶函数：以函数作为参数或者将函数作为返回值，比如说map（f,sq)将函数f作用到sq中的每个值上面。
+
+filter(f,sq)的作用相当于，对sq中的每个元素s，返回f(s)为true的元素。
+
+* 还有一种就是有点类似于装饰器的用法
+
+  ```pytho
+  def make_logger(target):
+      def logger(data):
+          with open(target, 'a') as f:
+              f.write(data + '\n')
+      return logger
+  
+  foo_logger = make_logger('foo.txt')
+  foo_logger('Hello')
+  foo_logger('World')
+  ```
+
+* 匿名函数：就是lambda表达式，大概写法就是
+
+> ```python
+> lambda <variables>: <expression>
+> ```
+
+前面是参数列表，后面是表达式或者返回值，一些例子如下。
+
+```pytho	
+from functools import reduce
+s1 = reduce(lambda x, y: x+y, map(lambda x: x**2, range(1,10)))
+print(s1)
+```
+
+* 全局变量，函数中可以使用到全局变量的值，但是，如果要对全局变量进行修改的话，必须加上global修饰符，例子如下
+
+```python
+x = 15
+
+def print_newx():
+    global x
+    x = 18
+    print (x)
+    
+print_newx()
+
+print (x)
+```
+
+* 递归，细节就不多说了，这里写一个斐波那契的例子
+
+```python
+def fib(n):
+    if n <= 0:
+        return 'Invalid input'
+    elif n == 1 or n ==2:
+        return 1
+    else:
+        return f(n-1) + f(n-2)
+```
+
